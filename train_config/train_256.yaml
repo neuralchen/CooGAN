@@ -1,0 +1,72 @@
+# Related scripts
+trainScriptName: common
+modelScriptName: network_models
+stuScriptName: SRU_modify_relu
+
+# Device
+threads: -1
+
+# Training information
+totalEpoch: 200
+batchSize: 40
+sampleThresInt: 1.0
+thresInt: 0.5
+max2Keep: 10
+
+# Dataset
+imsize: 256
+imCropSize: 0
+globalImSize: 384
+imcropPathSize: 128
+selectedAttrs: ['Bald', 'Bangs', 'Black_Hair', 'Blond_Hair', 'Brown_Hair', 'Bushy_Eyebrows', 'Eyeglasses',
+                  'Male', 'Mouth_Slightly_Open', 'Mustache', 'No_Beard', 'Pale_Skin', 'Young']
+selectedSimpleAttrs: ['Bald', 'Bangs', 'Black', 'Blond', 'Brown', 'Eyebrows', 'glass',
+                  'Male', 'Mouth', 'Mustache', 'NoBeard', 'Pale', 'Young']
+loadPatchData: False
+dataset: 'CelebA256' # ['CelebA','CelebAHQ',"CelebA256","CelebA384"])
+sampleNum: 32
+
+# Optimizer
+gLr: 0.0003
+dLr: 0.0003
+lrDecay: 0.1
+lrDecayEpoch: 100
+lrDecayEnable: True
+beta1: 0.5
+beta2: 0.999
+dStep: 5
+gStep: 1
+GPWeight: 10.0
+recWeight: 100
+GAttrWeight: 10.0
+DAttrWeight: 1.0
+classificationLossType: 'cross-entropy'
+
+# Model hyper-parameters
+GConvDim: 32
+DConvDim: 32
+stuDim: 32
+stuInjectLayers: 4
+stuKS: 3
+DFcDim: 768
+GLayerNum: 5
+DLayerNum: 5
+skipNum: 4
+injectLayers: 4
+oneMoreConv: 0
+skipRatio: 1
+resNum: 0
+globalGConvDim: 32
+GEncActName: leakyrelu
+GDecActName: relu
+GOutActName: tanh
+GSkipActName: leakyrelu
+DActName: leakyrelu
+
+# Log 
+logEpoch: 1
+sampleEpoch: 0
+modelSaveEpoch: 0
+PSNR: True
+ACC: True
+ACCModel: "./Pretrained/Classifier/70000_G.pth"

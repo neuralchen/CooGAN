@@ -1,0 +1,81 @@
+# Related scripts
+trainScriptName: common
+modelScriptName: network_models
+stuScriptName: SRU_modify
+
+# Device
+threads: -1
+
+# Training information
+totalEpoch: 200
+batchSize: 32
+sampleThresInt: 1.0
+thresInt: 0.5
+max2Keep: 10
+
+# Dataset
+imsize: 128
+imCropSize: 178
+globalImSize: 384
+imcropPathSize: 128
+selectedAttrs: ['Bald', 'Bangs', 'Black_Hair', 'Blond_Hair', 'Brown_Hair', 'Bushy_Eyebrows', 'Eyeglasses',
+                  'Male', 'Mouth_Slightly_Open', 'Mustache', 'No_Beard', 'Pale_Skin', 'Young']
+selectedSimpleAttrs: ['Bald', 'Bangs', 'Black', 'Blond', 'Brown', 'Eyebrows', 'glass',
+                  'Male', 'Mouth', 'Mustache', 'NoBeard', 'Pale', 'Young']
+loadPatchData: False
+dataset: 'CelebA' # ['CelebA','CelebAHQ',"CelebA256","CelebA384"])
+sampleNum: 32
+specifiedImages: ['000025.jpg','000052.jpg','000085.jpg','000109.jpg','000110.jpg',
+                    '000121.jpg','000129.jpg', '000152.jpg','000161.jpg', '000168.jpg',
+                        #  '000239.jpg','000273.jpg','000306.jpg','000357.jpg','000383.jpg',
+                    '000406.jpg','000497.jpg','000521.jpg','000710.jpg','000930.jpg']
+
+specifiedTestImages: ['000406.jpg','000814.jpg','001818.jpg','002764.jpg', '003105.jpg',
+                        "005156.jpg","012622.jpg","012486.jpg",'009698.jpg','009530.jpg',
+                        '008472.jpg']
+                
+
+# Optimizer
+gLr: 0.0003
+dLr: 0.0003
+lrDecay: 0.1
+lrDecayEpoch: 100
+lrDecayEnable: True
+beta1: 0.5
+beta2: 0.999
+dStep: 5
+gStep: 1
+GPWeight: 10.0
+recWeight: 100
+GAttrWeight: 10.0
+DAttrWeight: 1.0
+classificationLossType: 'cross-entropy'
+
+# Model hyper-parameters
+GConvDim: 64
+DConvDim: 64
+stuDim: 64
+stuInjectLayers: 4
+stuKS: 3
+DFcDim: 1024
+GLayerNum: 5
+DLayerNum: 5
+skipNum: 4
+injectLayers: 4
+oneMoreConv: 0
+skipRatio: 1
+resNum: 0
+globalGConvDim: 32
+GEncActName: leakyrelu
+GDecActName: relu
+GOutActName: tanh
+GSkipActName: leakyrelu
+DActName: leakyrelu
+
+# Log 
+logEpoch: 1
+sampleEpoch: 0
+modelSaveEpoch: 0
+PSNR: True
+ACC: True
+ACCModel: "./Pretrained/Classifier/70000_G.pth"

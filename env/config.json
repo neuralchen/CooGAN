@@ -1,0 +1,24 @@
+{
+    "path":{
+        "trainLogRoot":"./train_logs",
+        "testLogRoot":"./test_logs",
+        "systemLog":"./system/system_log.log",
+        "datasetPath":{
+            "celeba":"F:\\DataSet\\CelebA\\Img\\img_align_celeba",
+            "celeba256":"F:\\Celeba\\data_crop_384_jpg",
+            "celeba512":"",
+            "celeba1024":""
+        },
+        "datasetAttrPath":{
+            "celeba":"",
+            "celeba256":"",
+            "celeba512":"",
+            "celeba1024":""
+        },
+        "trainConfigPath":"./train_config",
+        "trainScriptsPath":"./train_scripts",
+        "testScriptsPath":"./test_scripts",
+        "remoteNodeInfo":"./nodesInfo/nodes.json",
+        "configJsonName":"model_config.json"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "4card":{
+        "ip":"192.168.101.57",
+        "user":"gdp",
+        "passwd":"glass123456",
+        "basePath":"/home/gdp/CXH/PleaseWork"
+    },
+    "lyh":{
+        "ip":"172.27.232.105",
+        "user":"lyh123",
+        "passwd":"123456",
+        "basePath":"/DATA/liyunhao_data/cxh/PleaseWork/train_logs"
+    },
+    "8card":{
+        "ip":"192.168.101.34",
+        "user":"user300",
+        "passwd":"300300300",
+        "basePath":"/home/user300/LNY/PleaseWork/train_logs/"
+    },
+    "loc":{
+        "ip":"192.168.4.89",
+        "user":"lochappy",
+        "passwd":"loc123",
+        "basePath":"/media/lochappy/Data/CXH/train_logs"
+    }
+}
