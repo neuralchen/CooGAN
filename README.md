@@ -1,7 +1,7 @@
-# Collaberative GAN
-
+# CooGAN
+Under construction
 # dependencies
-- tensorflow-gpu <=1.2
+- tensorflow-gpu <=1.3
 - pyyaml
 - paramiko
 - pillow
